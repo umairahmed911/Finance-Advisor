@@ -54,7 +54,7 @@ These agents are orchestrated by a third agent that combines their outputs into 
 4. **Run the Application**
 
    ```bash
-   python Finance_Advisr.py
+   python Finance_Advisor.py
    ```
 
 ## Example
