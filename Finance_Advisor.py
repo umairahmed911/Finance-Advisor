@@ -13,9 +13,9 @@ client = groq.Client(api_key=api_key)
 
 
 web_search_agent=Agent(
-    name="Web Search Agnet",
+    name="Web Search Agent",
     role="Search the web for the information",
-    model=Groq(id="Llama-3.3-70b-Specdec"),
+    model=Groq(id="llama-3.3-70b-versatile"),
     tools=[DuckDuckGo()],
     instructions=["Always include sources"],
     show_tools_calls=True,
@@ -24,8 +24,8 @@ web_search_agent=Agent(
 )
 
 finance_agent=Agent(
-    nme="Finance Agent",
-    model=Groq(id="Llama-3.3-70b-Specdec"),
+    name="Finance Agent",
+    model=Groq(id="llama-3.3-70b-versatile"),
     tools=[
         YFinanceTools(stock_price=True, analyst_recommendations=True, stock_fundamentals=True, company_news=True)
         ],
@@ -36,10 +36,10 @@ finance_agent=Agent(
 
 multi_ai_agent=Agent(
     team=[web_search_agent,finance_agent],
-    model=Groq(id="Llama-3.3-70b-Specdec"),
+    model=Groq(id="llama-3.3-70b-versatile"),
     instructions=["Always include sources","Use table to display data"],
     show_tool_calls=True,
     markdown=True,
 )
 
-multi_ai_agent.print_response("Summarize analyst recommendation and share the latest news for OGDCL",stream=True)
+multi_ai_agent.print_response("Summarize analyst recommendation and share the latest news for Tesla",stream=True)
