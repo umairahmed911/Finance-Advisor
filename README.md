@@ -70,3 +70,10 @@ This triggers a coordinated response from both agents, presenting a summary with
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+### Agent Thinking Process
+![Agent Running](img01.png)
+
+### Terminal Output Example
+![Terminal Output](img02.png)
+
